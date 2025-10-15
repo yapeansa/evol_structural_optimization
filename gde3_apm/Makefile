@@ -1,6 +1,11 @@
+SRC=gde3_apm.cpp
+TARGET=gde3_apm
+CC=g++
+RM=rm -rf
+
 all:
-	g++ -std=c++17 -pthread gde3_apm.cpp -o gde3_apm -I/usr/include/eigen3
+	$(CC) $(SRC) -o $(TARGET)
 run:
-	./gde3_apm
+	./$(TARGET)
 clean:
-	rm -rf gde3_apm *.csv *.png
+	$(RM) $(TARGET) *.csv *.png
